@@ -1,0 +1,31 @@
+{
+    "name": "jawad-topdot/laravel-media",
+    "description": "",
+    "type": "library",
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
+        "spatie/laravel-medialibrary": "^9.0.0",
+        "livewire/livewire": "^2.4",
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhammad Jawad",
+            "email": "jawad.topdot@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Topdot\\Media\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Topdot\\Media\\MediaServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
