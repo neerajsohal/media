@@ -2,8 +2,11 @@
 
 namespace Topdot\Media;
 
+use Topdot\Media\App\Http\Livewire\FilePreviewComponent;
+use Topdot\Media\App\Http\Livewire\TempFileUploadComponent;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
+use Livewire;
 
 class MediaServiceProvider extends ServiceProvider
 {
@@ -27,6 +30,9 @@ class MediaServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(realpath(__DIR__.'/resources/views/'), 'media');
         $this->mergeConfigFrom(__DIR__.'/config.php', 'media');
+
+        Livewire::component('file-preview-component', FilePreviewComponent::class);
+        Livewire::component('temp-file-upload-component', TempFileUploadComponent::class);
 
         $this->setupRoutes($this->app->router);
 
