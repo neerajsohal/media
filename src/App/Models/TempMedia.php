@@ -13,7 +13,7 @@ class TempMedia extends Model implements HasMedia
 
     protected $fillable = [];
 
-    public function getFile($collection='default')
+    public function getFile($collection = 'default')
     {
         if ( !$this->hasMedia($collection) ){
             return null;

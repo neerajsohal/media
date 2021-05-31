@@ -69,11 +69,6 @@ class MediaServiceProvider extends ServiceProvider
             __DIR__.'/config.php' => config_path('media.php'),
         ], 'config');
 
-        $this->publishes([
-            __DIR__.'/public' => public_path(),
-            __DIR__.'/../fonts' => public_path('fonts'),
-        ], 'public');
-
         if (! class_exists('CreateTempMediaTable')) {
             $this->publishes([
                 __DIR__.'/database/migrations/create_temp_media_table.php.stub' => database_path('migrations/2021_05_06_064425_create_temp_media_table.php'),
