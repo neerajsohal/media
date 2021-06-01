@@ -31,8 +31,8 @@ class MediaServiceProvider extends ServiceProvider
         $this->loadViewsFrom(realpath(__DIR__.'/resources/views/'), 'media');
         $this->mergeConfigFrom(__DIR__.'/config.php', 'media');
 
-        Livewire::component('file-preview-component', FilePreviewComponent::class);
-        Livewire::component('temp-file-upload-component', TempFileUploadComponent::class);
+        Livewire::component('media::file-preview-component', FilePreviewComponent::class);
+        Livewire::component('media::temp-file-upload-component', TempFileUploadComponent::class);
 
         $this->setupRoutes($this->app->router);
 
