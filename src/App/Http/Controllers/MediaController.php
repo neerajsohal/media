@@ -30,11 +30,15 @@ class MediaController extends Controller
             return $mediaStored->model->id;
         }
 
+        $url = route('media.show', $mediaStored->id);
+
+        $url = str_replace(rtrim(url('/'), '/'), '', $url);
+
         return [
-            "location" => route('grapesjs.media.show', $mediaStored->id),
+            "location" => $url,
             'temp_id' => $mediaStored->model->id,
             'media_id' => $mediaStored->id,
-            'media_url' => route('grapesjs.media.show', $mediaStored->id)
+            'media_url' => $url
         ];
     }
 
