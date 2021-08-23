@@ -21,7 +21,7 @@ class MediaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'file' => 'required|image|max:10240'
+            'file' => 'bail|required|file|max:10240'
         ]);
 
         $mediaStored = TempMedia::create()->addMediaFromRequest('file')->toMediaCollection('temporary');
@@ -32,7 +32,7 @@ class MediaController extends Controller
 
         $url = route('media.show', $mediaStored->id);
 
-        $url = str_replace(rtrim(url('/'), '/'), '', $url);
+        // $url = str_replace(rtrim(url('/'), '/'), '', $url);
 
         return [
             "location" => $url,
