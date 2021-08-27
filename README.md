@@ -1,6 +1,6 @@
 # Installation
 
->`composer require jawad-topdot/laravel-media`
+>`composer require jd-dotlogics/laravel-media`
 
 
 Publish migrations
