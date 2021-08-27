@@ -1,10 +1,10 @@
 <?php
 
-namespace Topdot\Media\App\Http\Livewire;
+namespace Dotlogics\Media\App\Http\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use Topdot\Media\App\Models\TempMedia;
+use Dotlogics\Media\App\Models\TempMedia;
 use Illuminate\Database\Eloquent\Collection;
 
 class TempFileUploadComponent extends Component

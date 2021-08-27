@@ -1,9 +1,9 @@
 <?php
 
-namespace Topdot\Media;
+namespace Dotlogics\Media;
 
-use Topdot\Media\App\Http\Livewire\FilePreviewComponent;
-use Topdot\Media\App\Http\Livewire\TempFileUploadComponent;
+use Dotlogics\Media\App\Http\Livewire\FilePreviewComponent;
+use Dotlogics\Media\App\Http\Livewire\TempFileUploadComponent;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
 use Livewire;

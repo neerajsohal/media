@@ -4,4 +4,4 @@
 
 
 Publish migrations
->`php artisan vendor:publish --provider="Topdot\Media\MediaServiceProvider" --tag="migrations"`
+>`php artisan vendor:publish --provider="Dotlogics\Media\MediaServiceProvider" --tag="migrations"`

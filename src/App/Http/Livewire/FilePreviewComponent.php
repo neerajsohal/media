@@ -1,6 +1,6 @@
 <?php
 
-namespace Topdot\Media\App\Http\Livewire;
+namespace Dotlogics\Media\App\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\Database\Eloquent\Model;

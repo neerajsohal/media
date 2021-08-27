@@ -1,5 +1,5 @@
 {
-    "name": "jawad-topdot/laravel-media",
+    "name": "jd-dotlogics/laravel-media",
     "description": "",
     "type": "library",
     "require": {
@@ -11,19 +11,19 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Muhammad Jawad",
-            "email": "jawad.topdot@gmail.com"
+            "name": "Dotlogics",
+            "email": "hello@dotlogics.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Topdot\\Media\\": "src"
+            "Dotlogics\\Media\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Topdot\\Media\\MediaServiceProvider"
+                "Dotlogics\\Media\\MediaServiceProvider"
             ]
         }
     },

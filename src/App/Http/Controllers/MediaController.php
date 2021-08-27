@@ -1,11 +1,11 @@
 <?php
 
-namespace Topdot\Media\App\Http\Controllers;
+namespace Dotlogics\Media\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Topdot\Media\App\Models\TempMedia;
+use Dotlogics\Media\App\Models\TempMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class MediaController extends Controller
