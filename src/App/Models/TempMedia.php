@@ -1,6 +1,6 @@
 <?php
 
-namespace Topdot\Media\App\Models;
+namespace Dotlogics\Media\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
