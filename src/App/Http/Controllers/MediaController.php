@@ -21,7 +21,7 @@ class MediaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'file' => 'bail|required|file|max:10240'
+            'file' => 'bail|required|file|max:102400'
         ]);
 
         $mediaStored = TempMedia::create()->addMediaFromRequest('file')->toMediaCollection('temporary');
