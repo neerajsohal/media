@@ -9,7 +9,7 @@
 				</div>
 			@endif
 
-			<div wire:loading wire:target="file" id="progress-bar" class="w-100 bg-light position-absolute rounded" style="height: 10px;top:0;left:0;z-index:100;">
+			<div wire:loading wire:target="file" id="progress-bar" class="w-100 bg-light position-absolute rounded" style="height: 16px;top:0;left:0;z-index:100;">
 				<div class="progress h-100 bg-success d-block position-relative rounded m-0">
 					<span style="font-size: 8px;color:#fff;font-weight:bold;"></span>
 				</div>
