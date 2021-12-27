@@ -10,11 +10,14 @@ class FilePreviewComponent extends Component
 {
     public Model $model;
     public string $collection;
+    public $deleted = [];
 
     public function mount($model, $collection)
     {
         $this->model = $model;
         $this->collection = $collection;
+
+        $this->deleted = old("deleted_files.{$collection}", []);
     }
 
     public function render()
@@ -24,8 +27,18 @@ class FilePreviewComponent extends Component
 
     public function remove(Media $media)
     {
-        $media->delete();
-        $this->model->refresh();
-        $this->emit('file_removed', $this->model->getMedia($this->collection)->count());
+        if(config('media.delete_from_db')){
+            $media->delete();
+            $this->model->refresh();
+
+            $less = 0;
+        }else{
+            $this->deleted[] = $media->id;
+            $less = count($this->deleted);
+        }
+
+        $total = $this->model->getMedia($this->collection)->count();
+
+        $this->emit("file_removed-{$this->collection}", $total - $less);
     }
 }

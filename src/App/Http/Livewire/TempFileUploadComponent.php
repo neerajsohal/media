@@ -20,8 +20,6 @@ class TempFileUploadComponent extends Component
     public $total_files = null;
     public $canAddMoreFiles = true;
 
-    protected $listeners = ['file_removed'];
-
     public function mount(string $name, array $config=[], $maxFiles=10, $totalFiles = null)
     {
         $this->maxFiles = $maxFiles;
@@ -85,7 +83,12 @@ class TempFileUploadComponent extends Component
         ];
     }
 
-    public function file_removed($total_files){
+    protected function getListeners()
+    {
+        return ["file_removed-{$this->name}" => 'fileRemoved'];
+    }
+
+    public function fileRemoved($total_files){
         $this->total_files = $total_files;
     }
 
