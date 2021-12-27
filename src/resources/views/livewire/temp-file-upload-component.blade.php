@@ -15,8 +15,6 @@
 				</div>
 			</div>
 
-
-
 			<div class="file-preview p-1 cursor-default {{ $files->isEmpty() ? 'd-none' :'' }}">
 				@foreach($files as $fileTemp)
 					@if($file = $fileTemp->getFile())
@@ -76,6 +74,14 @@
 					width: `${data.detail.progress}%`
 				});
 				$(progressText).text(`${data.detail.progress}%`);
+			})
+
+
+			$('#{{$name}}-file').on('livewire-upload-error', function(data) {
+				let label = $('#root-{{$name}}');
+
+				label.find('.text-danger').remove();
+				label.find('.loader').after('<div class="text-danger">Something went wrong. Please try again latter.</div>');
 			})
 		})
 	</script>
