@@ -1,4 +1,4 @@
-<div class="position-relative d-flex justify-content-center align-items-center p-2">
+<div class="position-relative d-flex flex-wrap justify-content-center align-items-center p-2">
     @foreach($model->getMedia($collection) as $media)
         @if (!in_array($media->id, $deleted))
             <div class="image-wrapper position-relative p-1">

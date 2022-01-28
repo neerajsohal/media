@@ -41,7 +41,7 @@ class TempFileUploadComponent extends Component
 
     public function updatedFile()
     {
-        if ( !is_null($this->maxFiles) && count($this->files) >=  $this->maxFiles ){
+        if ( !is_null($this->maxFiles) && ($this->files->count() + $this->total_files) >=  $this->maxFiles ){
             $this->addError($this->name, "Cannot add more then {$this->maxFiles} Images");
             return;
         }
@@ -67,7 +67,7 @@ class TempFileUploadComponent extends Component
     }
 
     public function setCanAddMore(){
-        $this->canAddMoreFiles = (is_null($this->maxFiles) || count($this->files) <  $this->maxFiles);
+        $this->canAddMoreFiles = (is_null($this->maxFiles) || ($this->files->count() + $this->total_files) <  $this->maxFiles);
     }
 
     private function config()
